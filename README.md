@@ -116,6 +116,9 @@ Microsoft Azure, often referred to as Azure, is a cloud computing platform run b
 
 
 ### Scope levels of Azure
+
+[Scope levels img](C:\Users\iveta_6esu9b1\azureNotes\Screenshot_5.png)
+
 **Management groups** – helps to manage access policies compliance for subscriptions. Set a policy on certain things you want. Set permissions. Way to separate billing for marketing team, testing team etc. only specific size of VM for group is located, good for cost. There can be management group within a management group.
 
 **Subscriptions** – separate billing. Each subscription. Most popular – pay as you go. Limits for subscriptions, eg number of recourse groups (limits are usually quite high)
@@ -129,6 +132,8 @@ Microsoft Azure, often referred to as Azure, is a cloud computing platform run b
 
 
 ### Types of cloud services 
+
+[Types of services img](C:\Users\iveta_6esu9b1\azureNotes\Screenshot_6.png)
 
 **IaaS** – infrastructure as a service
 
