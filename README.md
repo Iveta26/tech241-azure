@@ -12,7 +12,7 @@ It is services to store, process and manage data remotely. The services are avai
 
 Generating the key
 
-``` PowerShell
+``` bash
 iveta_6esu9b1@DESKTOP-GVT7GPM MINGW64 ~
 $ mkdir .ssh
 
@@ -56,10 +56,10 @@ tech241-iveta-az-key  tech241-iveta-az-key.pub
 
  Copying the key to use in our VM
  
- ```PowerShell
+ ```bash
 iveta_6esu9b1@DESKTOP-GVT7GPM MINGW64 ~/.ssh
 $ cat tech241-iveta-az-key.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDny2/VrYUZMAL54pVyTCFDSnA9GwOn0B46XlmFa+LNZP8SuKkTxzT/nyC9eO/cBU8qqeZdZm29T+3l4pUNxMNb9gCAl1BLOsMnHX60rdv1HENCBjsg+OW53NgAsQcMPIx4+Zo2NJ1mUouLzXMf0LF+2eGXlGg0pxXPElS0alBIa/P/4FBGwt/J9TL90A/VAf0fmnV9fC0z4mrGHnQbYZXhv9GIVPcv/yIdCLDZhDicFVLNHuYpy7OVk4K1tBaFsHSr0wspXDPtkd6Hb1e0nXM2jmVi9prVjclgDhpkDUfiDyBSfimKiB4++HDRlEHCo33oP/zcFINgnTN9zCy197nJAKVn0s3D10w6aj10FJggZbcRj/JetJF8AcxvIw6kIZx8KN7D1YrRSjW9iY50lzSLeLNojc1LEX1W8dKtwexYYCpNn824O7U6tGdvbWk7nONn26cVwcwx40LpsL/dCXDP6tC8sUl+L4gZDHdvfViKEgYfWJ4mkQI6PQtWsMlpuOcgclRFAlc/PN2Ig3VXKUFnlbRHtcTITF+mp+fNEOwWw2y6fHOG93ipcbjXkuKJTkcVcWOYenI65av1zCqydUu7ydsVFdY5LhbphsC5y++U5m/3cAPkVD7jNlCZhdjujqIL1LnwwzKgOdGFFicSf/ez+001ktJqfvmx7jmcE0aNPQ== ivetaa1997@gmail.com
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDny2/VrYUZMAL54pVyTCFDSnA9GwOn0B46XlmFa+LNZP8SuKkTxzT/nyC9eO/cBU8qqeZdZm29T+3l4pUNxMNb9gCAl1BLOsMnHX60rdv1HENCBjsg+OW53NgAsQcMPIx4+Zo2NJ1mUouLzXMf0LF+2eGXlGg0pxXPElS0alBIa/P/4FBGwt/J9TL90A/VAf0fmnV9fC0z4Alc/PN2Ig3VXKUFnlbRHtcTITF+mp+fNEOwWw2y6fHOG93ipcbjXkuKJTkcVcWOYenI65av1zCqydUu7ydsVFdY5LhbphsC5y++U5m/3cAPkVD7jNlCZhdjujqIL1LnwwzKgOdGFFicSf/ez+001ktJqfvmx7jmcE0aNPQ== ivetaa1997@gmail.com
 
  ```
 
@@ -67,7 +67,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDny2/VrYUZMAL54pVyTCFDSnA9GwOn0B46XlmFa+LN
 
 Making the key read only 
 
-```PowerShell
+```bash
 iveta_6esu9b1@DESKTOP-GVT7GPM MINGW64 ~/.ssh
 $ chmod 400 tech241-iveta-az-key
 
@@ -85,7 +85,7 @@ total 8
 
 Logging in
 
-```PowerShell
+```bash
 iveta_6esu9b1@DESKTOP-GVT7GPM MINGW64 ~/.ssh
 $ ssh -i ~/.ssh/tech241-iveta-az-key adminuser@20.58.17.46
 
@@ -117,7 +117,7 @@ Microsoft Azure, often referred to as Azure, is a cloud computing platform run b
 
 ### Scope levels of Azure
 
-[Scope levels img](C:\Users\iveta_6esu9b1\azureNotes\Screenshot_5.png)
+![Scope levels img](C:\Users\iveta_6esu9b1\azureNotes\Screenshot_5.png)
 
 **Management groups** – helps to manage access policies compliance for subscriptions. Set a policy on certain things you want. Set permissions. Way to separate billing for marketing team, testing team etc. only specific size of VM for group is located, good for cost. There can be management group within a management group.
 
@@ -133,7 +133,7 @@ Microsoft Azure, often referred to as Azure, is a cloud computing platform run b
 
 ### Types of cloud services 
 
-[Types of services img](C:\Users\iveta_6esu9b1\azureNotes\Screenshot_6.png)
+![Types of services img](C:\Users\iveta_6esu9b1\azureNotes\Screenshot_6.png)
 
 **IaaS** – infrastructure as a service
 
@@ -151,3 +151,16 @@ Capital expenditure vs operational expenditure.
 **Capital expenditure** – upfront costs (e.g equipment, if on prem you must buy servers. Mostly on prem, they still have some operational exp)
 
 **Operational expenditures** – expenses are spread out throughout the year (the cloud)
+
+
+### Connecting using scp
+
+```
+$ scp -i ~/.ssh/tech241-iveta-az-key -r C:/Users/iveta_6esu9b1/app adminuser@20.58.17.46:/home/adminuser/tech241-sparta-app
+```
+
+### Connecting using git clone
+
+```
+git clone https://linktogitrepo file-to-be-saved-in
+```
