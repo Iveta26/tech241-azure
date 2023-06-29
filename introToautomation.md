@@ -37,6 +37,7 @@ export DB_HOST=mongodb://51.142.192.154:27017/posts
 npm install
 
 pm2 start app.js # <- pm2 runds in the background
+
 ```
 
 
@@ -44,6 +45,7 @@ pm2 start app.js # <- pm2 runds in the background
 
 ```bash
 #!/bin/bash
+
 
 sudo apt update -y
 
