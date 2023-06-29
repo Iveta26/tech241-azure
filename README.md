@@ -176,7 +176,11 @@ location / {
     proxy-pass http://localhost: 3000;
 }
 ```
-3. Apply the edit to configuration file
+3. Test the syntax
+```
+sudo nginx -t
+```
+4. Apply the edit to configuration file
 ```
 restart nginx
 ```
