@@ -28,7 +28,7 @@ check blobs in container
 ``` az storage blob list --account-name tech241ivetastorage --container-name testcontainer  --output table --auth-mode login ```
 
 
-## Uploading imgage blob to account container
+## Uploading image blob to account container
 
 1. creating storage account 
 ```az storage account create --name tech241ivetastorage --resource-group tech241 --location uksouth --sku Standard_LRS```
