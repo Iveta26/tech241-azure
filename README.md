@@ -164,3 +164,19 @@ $ scp -i ~/.ssh/tech241-iveta-az-key -r C:/Users/iveta_6esu9b1/app adminuser@20.
 ```
 git clone https://linktogitrepo file-to-be-saved-in
 ```
+
+### Reverse proxy
+1. Getting into nginx configuration file
+```
+nano /etc/nginx/sites-available/default
+```
+2. Change the tryfiles to
+```json
+location / {
+    proxy-pass http://localhost: 3000;
+}
+```
+3. Apply the edit to configuration file
+```
+restart nginx
+```
