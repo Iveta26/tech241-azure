@@ -82,4 +82,4 @@ Beyond these two basic types of replication, there are three additional types av
 
 **Geo-Redundant storage (GRS)**—stores another three copies of data in a paired Azure region
 
-**Read-Access Geo-Redundant (RA-GRS)**—same as GRS, but allows data to be read from both Azure regionsObject Replication for Block Blob Storage—a special type of replication used only for block blobs, replicating them between a source and target storage account.
+**Read-Access Geo-Redundant (RA-GRS)**—same as GRS, but allows data to be read from both Azure regions
