@@ -170,7 +170,7 @@ git clone https://linktogitrepo file-to-be-saved-in
 ```
 nano /etc/nginx/sites-available/default
 ```
-2. Change the tryfiles to
+2. Change the try_files to apply the port we need
 ```json
 location / {
     proxy-pass http://localhost: 3000;
