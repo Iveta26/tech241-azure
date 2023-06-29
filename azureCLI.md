@@ -1,6 +1,48 @@
 # Intro to Azure CLI
 
 
+## Workingn in Azure CLI
+
+```az login```
+
+creating storage account 
+```az storage account create --name tech241ivetastorage --resource-group tech241 --location uksouth --sku Standard_LRS```
+sku is redundancy type
+
+
+list all storage accounts
+```az storage account list --resource-group tech241```
+
+
+choose the bits you want to take from json
+```az storage account list --resource-group tech241 --query "[].{Name:name, Location:location, Kind:kind}" --output table```
+
+creating container. \ is to break commands up into lines (not necessary)
+``` az storage container create \ --account-name tech241ivetastorage \ --name testcontainer ```
+
+
+uploading file we created
+``` az storage blob upload --account-name tech241ivetastorage --container-name testcontainer --name newname.txt --file test.txt --auth-mode login ```
+
+check blobs in container
+``` az storage blob list --account-name tech241ivetastorage --container-name testcontainer  --output table --auth-mode login ```
+
+
+## Uploading imgage blob to account container
+
+1. creating storage account 
+```az storage account create --name tech241ivetastorage --resource-group tech241 --location uksouth --sku Standard_LRS```
+2. creating container
+``` az storage container create \ --account-name tech241ivetastorage \ --name catcontainer ```
+3. downloading cat file
+```curl https://wallpapercave.com/wp/6G16E6x.jpg --output newcat.jpg```
+4. uploading file we created
+``` az storage blob upload --account-name tech241ivetastorage --container-name catcontainer --name uploadedcat.txt --file newcat.txt --auth-mode login ```
+5. modify HTML
+
+![cat image](spartaAppCat.png)
+
+
 ## Blob storage
 
 ### What is blob storage?
