@@ -165,7 +165,36 @@ $ scp -i ~/.ssh/tech241-iveta-az-key -r C:/Users/iveta_6esu9b1/app adminuser@20.
 git clone https://linktogitrepo file-to-be-saved-in
 ```
 
+<br />
+
 ### Reverse proxy
+
+#### What is reverse proxy?
+
+<br />
+
+First, what is a port?
+
+A port or port number is a number assigned to uniquely identify a connection endpoint and to direct data to a specific service. At the software level, within an operating system, a port is a logical construct that identifies a specific process or a type of network service.
+
+<br />
+
+A few definitions of proxy: 
+
+A reverse proxy server is a type of proxy server that typically sits behind the firewall in a private network and directs client requests to the appropriate backend server. 
+
+A reverse proxy is a type of proxy server that is used to protect a web server’s identity. It’s an intermediate connection point that forwards user/web browser requests to web servers, increasing performance, security, and reliability.
+![forvard and revrse proxy](proxy2.jpg)
+
+<br />
+
+The difference between a forward proxy vs a reverse proxy is minor, but they work differently. The key difference between a reverse proxy and a forward proxy is that a forward proxy enables computers isolated on a private network to connect to the public internet, while a reverse proxy enables computers on the internet to access a private subnet.
+![forvard and revrse proxy](proxy.jpg)
+
+<br />
+
+#### Setting reverse proxy on nginx
+
 1. Getting into nginx configuration file
 ```
 nano /etc/nginx/sites-available/default
