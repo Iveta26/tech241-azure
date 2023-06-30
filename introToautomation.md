@@ -20,26 +20,57 @@ nohup npm start &
 
 ### Launcing the app
 
+
+Creating environmental var ``` export DB_HOST=mongodb://172.166.128.199:27017/posts ``` connects to the DB.
+
 ```bash
+
+#!/bin/bash
+
+# update <- to ensure package source list is up to date
 sudo apt update -y
 
+
+# upgrade <- installs latests packages of linux
 sudo apt upgrade -y
 
-# download node js for npm and pm2
+
+# install nginx
+sudo apt install nginx -y
+
+
+# restart nginx
+sudo systemctl restart nginx
+
+# enable nginx - when VM restarts nginx will automatically start
+sudo systemctl enable nginx
+
+# download node source
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
+# install node js
+sudo apt install nodejs -y
 
-cd tech241-sparta-app
+sudo npm install pm2 -g
 
-#this connects to the DB
-export DB_HOST=mongodb://51.142.192.154:27017/posts
+# create env var. Enter IP and port of the DB
+export DB_HOST=mongodb://172.166.128.199:27017/posts
 
+
+git clone https://github.com/Iveta26/spartaApp sparta_app
+
+
+
+cd sparta_app
+
+#install node packages
 npm install
 
-pm2 start app.js # <- pm2 runds in the background
+#pm2 runs app in the background
+pm2 start app.js
+
 
 ```
-
 
 ### Launching the DB
 
