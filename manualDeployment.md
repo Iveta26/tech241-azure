@@ -32,6 +32,7 @@ sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org
 ```
 1. Configure mongo DB
 
+From local host to allowing acces from everyone
 ```bash
 sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
 ```
