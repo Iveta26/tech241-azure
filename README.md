@@ -204,9 +204,12 @@ location / {
     proxy_pass http://localhost:3000/;
 }
 ```
-![forvard and revrse proxy](locationNginx.jpg)
+Original:
+![nginx file](locationNginx.jpg)
 
-![forvard and revrse proxy](locationChange.jpg)
+
+Edited:
+![nginx file change](locationChanged.jpg)
 
 
 3. Test the syntax
