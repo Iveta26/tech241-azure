@@ -199,11 +199,16 @@ The difference between a forward proxy vs a reverse proxy is minor, but they wor
 nano /etc/nginx/sites-available/default
 ```
 2. Change the try_files to apply the port we need
-```json
+```
 location / {
-    proxy-pass http://localhost: 3000;
+    proxy_pass http://localhost:3000/;
 }
 ```
+![forvard and revrse proxy](locationNginx.jpg)
+
+![forvard and revrse proxy](locationChange.jpg)
+
+
 3. Test the syntax
 ```
 sudo nginx -t
