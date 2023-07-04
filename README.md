@@ -218,5 +218,5 @@ sudo nginx -t
 ```
 4. Apply the edit to configuration file
 ```
-restart nginx
+sudo systemctl restart nginx
 ```
